@@ -6,7 +6,7 @@ Mysql komutları nasıl kullanılır falan filan Sürekli Olarak Güncellenecekt
 
 SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısaca anlatmak gerekirse verileri yönetmek ve tasarlamak için kullanılan veritabanı yönetim sistemidir. Şunu bilmeniz gerekiyor ki SQL bir programlama dili değildir…
 
-
+<br><br>
 ----------
 
 
@@ -16,7 +16,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Create Database veritabaniismi ;
 
-
+<br><br>
 ----------
 
 
@@ -24,7 +24,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Use veritabanıismi;
 
-
+<br><br>
 ----------
 
 
@@ -40,7 +40,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 > 
 > );
 
-
+<br><br>
 ----------
 
 
