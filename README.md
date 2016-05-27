@@ -50,7 +50,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > insert into tabloadi (alandi1,alanadi2,alanadi3) values
 > (“veri1“,”veri2“,”veri3“);
-
+<br><br>
 
 ----------
 
@@ -61,7 +61,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > alter table tabloadi add alanadi veritipi ;
 
-
+<br><br>
 ----------
 
 
@@ -69,7 +69,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > alter table tabloadi alter column alanadi veritipi;
 
-
+<br><br>
 ----------
 
 
@@ -77,7 +77,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > alter table tabloadi drop alanadi;
 
-
+<br><br>
 ----------
 
 
@@ -88,7 +88,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 > **“auto_increment”** kodlama dillerinde sütuna boş bir değer tanımlandığında otomatik olarak değeri oluşturur ve tanımlanır.
 > **“primary key”** Birincil anahtar anlamına gelir.Tablo’nun birincil sütunudur ve her zaman farklıdır.
 
-
+<br><br>
 ----------
 
 
@@ -101,7 +101,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 >   yas INT, 
 > );
 
-
+<br><br>
 ----------
 
 
@@ -109,7 +109,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > drop table tabloadi;
 
-
+<br><br>
 ----------
 
 
@@ -117,7 +117,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 **alter table tabloadi drop alanadi;**
 
-
+<br><br>
 ----------
 
 
@@ -127,7 +127,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 > 
 > select alan1,alan2 from tabloadi; *#tablodaki seçilen alanlari listeler*
 
-
+<br><br>
 ----------
 
 
@@ -135,7 +135,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Select distinct alanadi from tabloadi;
 
-
+<br><br>
 ----------
 
 
@@ -143,14 +143,14 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Select alanadi astakmaadfromtabloadi;
 
-
+<br><br>
 ----------
 
 
 **Tablodan veri silme**
 
 > Delete fromtabloadi;
-
+<br><br>
 
 ----------
 
@@ -160,7 +160,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > update tabloadi set güncellenecekveri where sart;
 
-
+<br><br>
 ----------
 
 
@@ -169,7 +169,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 > Select *from tabloadi where not (dahil edilmek istenmeyen değerlerin
 > geleceği yer);
 
-
+<br><br>
 ----------
 
 
@@ -177,7 +177,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Select * from tabloadi where in(veri1,veri2);
 
-
+<br><br>
 ----------
 
 
@@ -185,7 +185,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Select  * from tabloadi where alanadi between değer1 and değer2;
 
-
+<br><br>
 ----------
 
 
@@ -197,7 +197,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 > 
 > asc = küçükten büyüğe sıralama
 
-
+<br><br>
 ----------
 
 
@@ -205,7 +205,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Select  concat(ad , soyad ) as advesoyad from tabloadi ;
 
-
+<br><br>
 ----------
 
 
@@ -213,7 +213,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Select  lenght(ad  ) as adınuzunluğu from tabloadi ;
 
-
+<br><br>
 ----------
 
 
@@ -221,7 +221,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Select  lower / upper (ad ) as buyukveyakuçukhali from tabloadi ;
 
-
+<br><br>
 ----------
 
 
@@ -229,7 +229,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Select  ltrim / rtrim (ad ) as boşluksilme from tabloadi ;
 
-
+<br><br>
 ----------
 
 
@@ -237,7 +237,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > Select  lower(ad ) as takmaad from tabloadi ;
 
-
+<br><br>
 ----------
 
 
@@ -245,7 +245,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > select substring(ad,1,5) as Say from personel;
 
-
+<br><br>
 ----------
 
 
@@ -253,7 +253,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > select avg(maas) as ortalamamaas from personel;
 
-
+<br><br>
 ----------
 
 
@@ -261,7 +261,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
 > select sum(maas) as toplammaas from personel;
 
-
+<br><br>
 ----------
 
 
@@ -271,7 +271,7 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 > 
 > select min(maas) as endusukmaas from personel;
 
-
+<br><br>
 ----------
 
 
@@ -281,11 +281,11 @@ SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısac
 
  
 
-
+<br><br>
 ----------
 
 Güncelleniyor...
 ================
 
-
+<br><br>
 ----------
