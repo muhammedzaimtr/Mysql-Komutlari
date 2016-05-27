@@ -1,193 +1,291 @@
 # Mysql-Komutlari
 Mysql komutları nasıl kullanılır falan filan Sürekli Olarak Güncellenecektir... 
 
-
-SQL Nedir? Ne Değildir?
+**SQL Nedir? Ne Değildir?**
+---------------------------
 
 SQL ‘in diğer bir adı ise yapılandırılmış sorgulama dilidir. SQL kısaca anlatmak gerekirse verileri yönetmek ve tasarlamak için kullanılan veritabanı yönetim sistemidir. Şunu bilmeniz gerekiyor ki SQL bir programlama dili değildir…
 
 
+----------
 
-Veritabanı Oluşturma ve Veritabanı seçme
 
-Veritabanı oluşturma komutu:
+**Veritabanı Oluşturma ve Veritabanı seçme**
 
-Create Database veritabaniismi ;
+**Veritabanı oluşturma komutu:**
 
+> Create Database veritabaniismi ;
 
-Veritabanı Seçme Komutu:
 
-Use veritabanıismi;
+----------
 
 
+**Veritabanı Seçme Komutu:**
 
-Tablo Oluşturma
+> Use veritabanıismi;
 
-Tablo oluşturma komutu:
 
-Create table tabloadi (
+----------
 
-alanadi1 veritipi,
 
-alanadi2 veritipi
+**Tablo Oluşturma**
 
-);
+**Tablo oluşturma komutu:**
 
+> Create table tabloadi (
+> 
+> alanadi1 veritipi,
+> 
+> alanadi2 veritipi
+> 
+> );
 
 
-Tabloya Veri Girişi Yapmak
+----------
 
-Veri girişi komutu:
 
-insert into tabloadi (alandi1,alanadi2,alanadi3) values (“veri1“,”veri2“,”veri3“);
+**Tabloya Veri Girişi Yapmak**
 
+**Veri girişi komutu:**
 
+> insert into tabloadi (alandi1,alanadi2,alanadi3) values
+> (“veri1“,”veri2“,”veri3“);
 
-Tablo Üzerinde Değişiklik Yapmak
 
-Tabloya yeni alan ekleme komutu:
+----------
 
-alter table tabloadi add alanadi veritipi ;
 
+**Tablo Üzerinde Değişiklik Yapmak**
 
-Tablodaki alan üzerinde değişiklik yapma komutu:
+**Tabloya yeni alan ekleme komutu:**
 
-alter table tabloadi alter column alanadi veritipi;
+> alter table tabloadi add alanadi veritipi ;
 
 
-Var olan tablodan alan silme komutu:
+----------
 
-alter table tabloadi drop alanadi;
 
+**Tablodaki alan üzerinde değişiklik yapma komutu:**
 
+> alter table tabloadi alter column alanadi veritipi;
 
-Tabloya Kısıtlama Ekleme
 
-“not null” veri tanımsız yani boş olamaz demektir.
-“unsigned” veri değeri bir tam sayı olmak zorundadır anlamına gelir.
-“auto_increment” kodlama dillerinde sütuna boş bir değer tanımlandığında otomatik olarak değeri oluşturur ve tanımlanır.
-“primary key” Birincil anahtar anlamına gelir.Tablo’nun birincil sütunudur ve her zaman farklıdır.
+----------
 
-MySQL komutlarının kullanımı ise aşağıdaki şekildedir.
 
-CREATE TABLEuyelik (
-idINT AUTO_INCREMENT PRIMARY KEY,
-adVARCHAR(50) not null,
-yasINT,
-unvanno int reference unvan(unvanno)
-);
+**Var olan tablodan alan silme komutu:**
 
+> alter table tabloadi drop alanadi;
 
-Tablo Silme
 
-drop table tabloadi;
+----------
 
 
-Tablodan alan silme
+**Tabloya Kısıtlama Ekleme**
 
-alter table tabloadi drop alanadi;
+> **“not null”** veri tanımsız yani boş olamaz demektir.
+> **“unsigned”** veri değeri bir tam sayı olmak zorundadır anlamına gelir.
+> **“auto_increment”** kodlama dillerinde sütuna boş bir değer tanımlandığında otomatik olarak değeri oluşturur ve tanımlanır.
+> **“primary key”** Birincil anahtar anlamına gelir.Tablo’nun birincil sütunudur ve her zaman farklıdır.
 
 
-Tablodan Veri Listeleme
+----------
 
-select * from  tabloadi; #tablodaki tüm alanları listeler
 
-select alan1,alan2 from tabloadi; #tablodaki seçilen alanlari listeler
+**MySQL komutlarının kullanımı ise aşağıdaki şekildedir.**
 
+> CREATE TABLE uyelik 
+> ( 
+> id INT AUTO_INCREMENT PRIMARY KEY,
+>  ad VARCHAR(50) not null,
+>   yas INT, 
+> );
 
-Tekrarlı Kayıtları Kaldırma
 
-Select distinct alanadi from tabloadi;
+----------
 
 
-Alanlara Takma Ad Ekleme
+**Tablo Silme**
 
-Select alanadi astakmaadfromtabloadi;
+> drop table tabloadi;
 
 
-Tablodan veri silme
+----------
 
-Delete fromtabloadi;
 
+**Tablodan alan silme**
 
-Var olan kayıtları güncelleme
+**alter table tabloadi drop alanadi;**
 
-updatetabloadisetgüncellenecekveriwheresart;
 
+----------
 
-Not Operatörü kullanımı
 
-Select *fromtabloadiwherenot(dahil edilmek istenmeyen değerlerin geleceği yer);
+**Tablodan Veri Listeleme**
 
+> select * from  tabloadi; *#tablodaki tüm alanları listeler*
+> 
+> select alan1,alan2 from tabloadi; *#tablodaki seçilen alanlari listeler*
 
-İn Operatörü kullanımı
 
-Select * from tabloadi where in(veri1,veri2);
+----------
 
 
-Between Operatörü kullanımı
+**Tekrarlı Kayıtları Kaldırma**
 
-Select  * from tabloadi where alanadi between değer1 and değer2;
+> Select distinct alanadi from tabloadi;
 
 
-Order by Operatörü kullanımı
+----------
 
-Select  * from tabloadi where order by alanadi asc/desc;
 
-desc = büyükten küçüğe sıralama
+**Alanlara Takma Ad Ekleme**
 
-asc = küçükten büyüğe sıralama
+> Select alanadi astakmaadfromtabloadi;
 
 
-Concat Operatörü kullanımı
+----------
 
-Select  concat(ad , soyad ) as advesoyad from tabloadi ;
 
+**Tablodan veri silme**
 
-Lenght Operatörü kullanımı
+> Delete fromtabloadi;
 
-Select  lenght(ad  ) as adınuzunluğu from tabloadi ;
 
+----------
 
-Lower ve Upper Operatörü kullanımı
 
-Select  lower / upper (ad ) as buyukveyakuçukhali from tabloadi ;
+**Var olan kayıtları güncelleme**
 
 
-Ltrim ve Rtrim Operatörü kullanımı
+> update tabloadi set güncellenecekveri where sart;
 
-Select  ltrim / rtrim (ad ) as boşluksilme from tabloadi ;
 
+----------
 
-Lower ve Upper Operatörü kullanımı
 
-Select  lower(ad ) as takmaad from tabloadi ;
+**Not Operatörü kullanımı**
 
+> Select *from tabloadi where not (dahil edilmek istenmeyen değerlerin
+> geleceği yer);
 
-Substring Operatörü kullanımı
 
-select substring(ad,1,5) as Say from personel;
+----------
 
 
-AVG Operatörü kullanımı
+**İn Operatörü kullanımı**
 
-select avg(maas) as ortalamamaas from personel;
+> Select * from tabloadi where in(veri1,veri2);
 
 
-Sum Operatörü kullanımı
+----------
 
-select sum(maas) as toplammaas from personel;
 
+**Between Operatörü kullanımı**
 
-Max ve Min Operatörü kullanımı
+> Select  * from tabloadi where alanadi between değer1 and değer2;
 
-select max(maas) as enyüksekmaas from personel;
 
-select min(maas) as endusukmaas from personel;
+----------
 
 
-Concat Operatörü kullanımı
+**Order by Operatörü kullanımı**
 
-select ad,soyad,concat(ad,soyad,”@gmail.com“) from personel;
+> Select  * from tabloadi where order by alanadi asc/desc;
+> 
+> desc = büyükten küçüğe sıralama
+> 
+> asc = küçükten büyüğe sıralama
+
+
+----------
+
+
+**Concat Operatörü kullanımı**
+
+> Select  concat(ad , soyad ) as advesoyad from tabloadi ;
+
+
+----------
+
+
+**Lenght Operatörü kullanımı**
+
+> Select  lenght(ad  ) as adınuzunluğu from tabloadi ;
+
+
+----------
+
+
+**Lower ve Upper Operatörü kullanımı**
+
+> Select  lower / upper (ad ) as buyukveyakuçukhali from tabloadi ;
+
+
+----------
+
+
+**Ltrim ve Rtrim Operatörü kullanımı**
+
+> Select  ltrim / rtrim (ad ) as boşluksilme from tabloadi ;
+
+
+----------
+
+
+**Lower ve Upper Operatörü kullanımı**
+
+> Select  lower(ad ) as takmaad from tabloadi ;
+
+
+----------
+
+
+**Substring Operatörü kullanımı**
+
+> select substring(ad,1,5) as Say from personel;
+
+
+----------
+
+
+**AVG Operatörü kullanımı**
+
+> select avg(maas) as ortalamamaas from personel;
+
+
+----------
+
+
+**Sum Operatörü kullanımı**
+
+> select sum(maas) as toplammaas from personel;
+
+
+----------
+
+
+**Max ve Min Operatörü kullanımı**
+
+> select max(maas) as enyüksekmaas from personel;
+> 
+> select min(maas) as endusukmaas from personel;
+
+
+----------
+
+
+**Concat Operatörü kullanımı**
+
+> select ad,soyad,concat(ad,soyad,”@gmail.com“) from personel;
 
  
+
+
+----------
+
+Güncelleniyor...
+================
+
+
+----------
